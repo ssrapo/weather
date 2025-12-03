@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="weatherCanvas"></canvas>
+
+  <div class="content-wrapper">
+    <div class="header">
+      <h1>Weather</h1>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city — e.g., Tokyo, Paris, Los Angeles" autocomplete="off" />
+        <button id="searchBtn"><i class="fas fa-sun"></i> Forecast</button>
+      </div>
+    </div>
+
+    <div id="weatherCard" class="weather-card hidden">
+      <div class="main-display">
+        <div class="location" id="locationHeader">--</div>
+        <img id="mainWeatherIcon" class="weather-icon" src="" alt="Weather" />
+        <div class="conditions" id="conditions">--</div>
+        <div class="temp-display" id="tempDisplay">--°C</div>
+      </div>
+
+      <h2 class="card-title"><i class="fas fa-cloud"></i> Atmosphere</h2>
+      <div class="grid" id="atmosphereGrid"></div>
+
+      <h2 class="card-title"><i class="fas fa-wind"></i> Wind & Pressure</h2>
+      <div class="grid" id="windGrid"></div>
+
+      <h2 class="card-title"><i class="fas fa-clock"></i> Local Time & Sun</h2>
+      <div class="grid" id="timeGrid"></div>
+
+      <h2 class="card-title"><i class="fas fa-heart"></i> Human Comfort</h2>
+      <div class="grid" id="comfortGrid"></div>
+    </div>
+
+    <div id="forecastSection" class="forecast-section hidden">
+      <h2 class="section-title">5-Day Forecast</h2>
+      <div class="forecast-grid" id="forecastGrid"></div>
+
+      <h2 class="section-title">Next 24 Hours</h2>
+      <div class="hourly-grid" id="hourlyGrid"></div>
+    </div>
+
+    <footer>
+      Precision weather intelligence • Powered by OpenWeatherMap
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
